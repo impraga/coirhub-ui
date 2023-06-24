@@ -1,0 +1,134 @@
+#contact{
+  /* min-height: 80vh; */
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-image: url(/assets/icons/map.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+#contact .ch-container , #contact .contact-row{
+  min-height: inherit;
+}
+.contact-content{
+  opacity: .9;
+  font-size: 1.2rem;
+}
+.form-cont{
+  background-color: white;
+  color: black;
+  padding: 70px 50px;
+  border-radius: 0 50px ;
+  max-width: 600px;
+  margin: auto;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+mat-form-field{
+  width: 100%;
+}
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: .3s ease-in-out;
+}
+.contact-form.active{
+  opacity: 0;
+  transform: translateY(-150%);
+
+}
+.form-submit{
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: .3s ease-in-out;
+}
+.form-submit.active{
+  top: 50%;
+}
+.form-submit img{
+  width: 190px;
+}
+.form-info{
+  opacity: .5;
+}
+.contact-full-width{
+  width: 100%;
+}
+
+.contact-content-cont{
+  width: 100%;
+  max-width: 600px;
+  margin-top: 60px;
+}
+.contact-info{
+  margin-top: 20px;
+  /* cursor: pointer; */
+  padding: 20px 60px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  transition: .3s;
+  border: 2px solid rgba(0, 0, 0, 0);
+
+}
+.contact-info:hover{
+  background-color: #32C36C09;
+  border: 2px solid var(--var-ch-green);
+}
+.contact-info-icon img{
+  width: 40px;
+}
+.contact-info-text{
+  padding-left: 25px;
+  font-size: 1.3rem
+}
+.form-cont{
+  width: 90%;
+}
+.link-hover{
+  cursor: pointer;
+  margin-bottom: 7px;
+  transition: .3s ease-in-out;
+}
+.link-hover:hover{
+  color: var(--var-ch-green);
+}
+@media screen and (max-width: 991px) {
+  #contact{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+.contact-content-cont{
+  margin: auto;
+  margin-top: 60px;
+}
+.form-cont{
+  width: 100%;
+}
+}
+@media screen and (max-width: 600px) {
+  #contact{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .form-cont{
+    width: 100%;
+  }
+  .contact-info{
+    padding: 20px 20px;
+  }
+  .form-cont{
+    padding: 40px 20px;
+    border-radius: 0px 35px;
+  }
+  .contact-content-cont{
+    margin-top: 30px;
+  }
+  .contact-info-icon img{
+    width: 30px;
+  }
+}

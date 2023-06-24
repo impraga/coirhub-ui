@@ -1,0 +1,124 @@
+.navbar{
+  background-color: #091722;
+  /* background-color: var(--var-ch-grey); */
+  color: white;
+  z-index: 100001;
+}
+.navbar-brand img{
+  height: 30px;
+}
+.navbar-brand{
+  color: white;
+}
+.hamBurger{
+  position: relative;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+.hamBurger:focus{
+  outline: 0;
+}
+.hamBurger:hover div{
+  background-color: var(--var-ch-green);
+}
+.hamBurger>div{
+  position: absolute;
+  top: 17.5px;
+  background-color: white;
+  width: 28px;
+  height: 3px;
+  transition: .4s ease-in-out;
+  border-radius: 1.5px;
+}
+.top{
+  transform: translateY(-10px);
+  margin: auto 4px;
+}
+.bottom{
+  transform: translateY(10px);
+  margin: auto 4px;
+
+}
+.middle{
+  width: 36px !important;
+}
+.active .top{
+  transform: rotate(45deg);
+}
+.active .middle{
+  opacity: 0;
+}
+.active .bottom{
+  transform: rotate(-45deg);
+}
+.menubar{
+  position: fixed;
+  z-index: 100000;
+  top: -100%;
+  height: calc(100vh - 56px);
+  width: 100vw;
+  background-color: #1a2a36f5;
+  transition: .5s ease-in-out;
+}
+.menubar.active{
+  top: 56px;
+}
+.menubar-overlay{
+  position: fixed;
+  z-index: 99999;
+  top: -100%;
+  height: calc(100vh - 56px);
+  width: 100vw;
+  background-color: #1a2a366c;
+  transition: .35s ease-in-out;
+}
+.menubar-overlay.active{
+  top: 56px;
+}
+
+.menu-items{
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.menu-ele {
+  margin-bottom: 10px;
+}
+.menu-text{
+  cursor: pointer;
+  transform: translateY(200px);
+ transition-delay: 1s;
+  transition: 1s ease-in-out;
+}
+.menu-text:hover{
+  color: var(--var-ch-green);
+}
+.itemactive .menu-text{
+  transform: translateY(0);
+}
+.menu-watermark{
+  position: absolute;
+  top: 50%;
+  right:20%;
+  transform: translate(50%,-50%);
+  font-size: 10rem;
+  opacity: .03;
+  font-weight: 700;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .menu-items{
+    font-size: 2rem;
+  }
+  .menubar .item{
+    margin: auto;
+    text-align: center;
+  }
+  .menu-watermark{
+    right: 50%;
+  font-size: 8rem;
+
+  }
+}

@@ -1,0 +1,20 @@
+.form-container {
+  color: var(--var-ch-grey);
+}
+.login-form{
+  /* display: flex; */
+  flex-direction: column;
+  max-width: 550px;
+  align-items: flex-start;
+
+}
+
+mat-form-field{
+  width: 100%;
+}
+.form-container{
+  background-color: white;
+}
+.image-container{
+  background-color: #2c3748;
+}

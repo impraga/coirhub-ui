@@ -1,0 +1,121 @@
+<section id="contact" class="px-g">
+
+  <div class="ch-container px-0 py-5">
+    <div class="row contact-row">
+      <div class="col-lg-6">
+        <div class="overflow-hidden">
+          <div class="section-heading" data-aos="fade-up" data-aos-duration="600">Get in Touch</div>
+        </div>
+        <div class="overflow-hidden">
+          <hr class="ch-hr" data-aos="fade-right" data-aos-duration="600">
+        </div>
+        <div class="overflow-hidden">
+          <div class="contact-content mt-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">Have a question? Please free to contact us.</div>
+        </div>
+        <!-- Old contact form 23-jan-14 -->
+        <!-- <div class="contact-content-cont">
+          <div  data-aos="fade-right" data-aos-duration="600" data-aos-delay="150" class="contact-info d-flex flex-row align-items-center">
+            <div class="contact-info-icon"><img src="./../../../assets/icons/004-phone.png" alt=""></div>
+            <div class="contact-info-text"><span onclick="window.location='tel:+919698692355'">9698692355</span>, <span onclick="window.location='tel:+919865266240'">9865266240</span> </div>
+          </div>
+          <div   data-aos="fade-right" data-aos-duration="600" data-aos-delay="200" class="contact-info d-flex flex-row align-items-center" onclick="window.open('https://wa.me/+916380936349?text=Hi%20I%20am%20interested%20in%20your%20Products', '_blank').focus()">
+            <div class="contact-info-icon"><img src="./../../../assets/icons/006-whatsapp.png" alt=""></div>
+            <div class="contact-info-text">6380936349</div>
+          </div>
+          <div   data-aos="fade-right" data-aos-duration="600" data-aos-delay="250" class="contact-info d-flex flex-row align-items-center" onclick="window.location='mailto:vyas@horizoncreative.in'">
+            <div class="contact-info-icon"><img src="./../../../assets/icons/001-email.png" alt=""></div>
+            <div class="contact-info-text">info@coirhub.com</div>
+          </div>
+          <div   data-aos="fade-right" data-aos-duration="600" data-aos-delay="300" class="contact-info d-flex flex-row align-items-start" onclick="window.open('https://goo.gl/maps/vUdzreNGPTqRNhRV7', '_blank').focus()" >
+            <div class="contact-info-icon mt-2"><img src="./../../../assets/icons/005-placeholder.png" alt="" ></div>
+            <div class="contact-info-text">Coir Hub<br>
+              Pollachi-udumalai road,<br>
+              unjavelampatti, pollachi,<br>
+              Tamil Nadu 642107</div>
+          </div>
+        </div> -->
+        <div class="contact-content-cont">
+
+          <div   data-aos="fade-right" data-aos-duration="600" data-aos-delay="150" class="contact-info d-flex flex-row align-items-start" >
+            <div class="contact-info-icon mt-2"><img src="./../../../assets/icons/india.png" alt="" ></div>
+            <div class="contact-info-text">
+              Pradhin k<br>
+              <div class="link-hover" onclick="window.location='tel:+916380936349'">
+                +91 6380936349<br>
+              </div>
+              <div class="link-hover" onclick="window.location='mailto:Info@coirhub.com'">
+                Info@coirhub.com<br>
+              </div>
+              <div class="link-hover" onclick="window.open('https://goo.gl/maps/vUdzreNGPTqRNhRV7', '_blank').focus()" >
+                Coir Hub<br>
+                Pollachi-udumalai road,<br>
+                unjavelampatti, pollachi,<br>
+                Tamil Nadu 642107
+              </div>
+              </div>
+              </div>
+
+          <div   data-aos="fade-right" data-aos-duration="600" data-aos-delay="250" class="contact-info d-flex flex-row align-items-start" >
+            <div class="contact-info-icon mt-2"><img src="./../../../assets/icons/worldwide.png" alt="" ></div>
+            <div class="contact-info-text">
+              Gayathri Palanisamy<br>
+              <div class="link-hover" onclick="window.location='tel:+447466964327'">
+                +44 7466964327<br>
+              </div>
+              <div class="link-hover" onclick="window.location='mailto:Gayathri@coirhub.com'">
+                Gayathri@coirhub.com<br>
+              </div>
+              <div class="link-hover" onclick="window.open('https://goo.gl/maps/vUdzreNGPTqRNhRV7', '_blank').focus()" >
+                <!-- Coir Hub<br> -->
+                Leicester <br>
+                Uk
+              </div>
+              </div>
+              </div>
+        </div>
+      </div>
+      <div class="py-5 px-3 col-lg-6 d-flex">
+        <div class="form-cont"   data-aos="fade-left" data-aos-duration="600" data-aos-delay="400">
+          <div>
+          <form [formGroup]="form" class="contact-form" [class.active]="formSubmited">
+            <div class="mb-3 form-info">Send your enquires</div>
+            <div class="alert alert-danger w-100" role="alert" *ngIf="formError">
+              Message was not sent! Please reload the page and try again.
+            </div>
+            <mat-form-field class="contact-full-width" appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName='name'>
+            </mat-form-field>
+            <mat-form-field class="contact-full-width" appearance="outline">
+              <mat-label>E Mail</mat-label>
+              <input matInput formControlName="email" type="email">
+            </mat-form-field>
+            <mat-form-field class="contact-full-width" appearance="outline">
+              <mat-label>Phone Number</mat-label>
+              <input matInput formControlName="phone" type="text">
+            </mat-form-field>
+            <mat-form-field class="contact-full-width" appearance="outline">
+              <mat-label>Message</mat-label>
+              <textarea matInput formControlName='message' rows="4"></textarea>
+            </mat-form-field>
+            <!-- <button class="btn btn-ch-primary ml-auto" type="button" (click)="sendMail()" [disabled]="form.invalid">Send</button> -->
+            <button class="btn btn-ch-primary ml-auto" type="button" (click)="sendMail()" [disabled]="form.invalid || isSending">
+              <div class="position-relative overflow-hidden btn-cont">
+                <div class="btn-ch-primary-dummy">Send</div>
+                <div class="btn-ch-primary-content">Send</div>
+                <div class="btn-ch-primary-trans">Send<img src="./../../../assets/icons/arrow-right-white.svg"></div>
+              </div>
+            </button>
+          </form>
+          </div>
+          <div class="form-submit" [class.active]="formSubmited">
+              <img  src="./../../../assets/icons/tick-green-1.svg" alt="">
+          </div>
+        </div>
+        </div>
+
+    </div>
+
+
+  </div>
+</section>

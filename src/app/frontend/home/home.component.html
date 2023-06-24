@@ -1,0 +1,110 @@
+<app-header></app-header>
+<div id="home">
+  <div class="home-content">
+    <div class="herobanner-text px-g">
+      <div class="ch-container px-0 mx-auto">
+        <div class="overflow-hidden hb-text-1" ><div data-aos-offset="1"  data-aos-duration="600" data-aos="fade-up" data-aos-delay="200">Best in field</div></div>
+        <div class="overflow-hidden hb-text-2" ><div data-aos-offset="1"  data-aos-duration="600" data-aos="fade-up" data-aos-delay="250">Since 1974</div></div>
+        <div class="overflow-hidden">
+          <hr data-aos="fade-right" data-aos-duration="600" data-aos-offset="1"  data-aos-delay="300" class="ch-hr">
+        </div>
+        <button data-aos="fade-up" data-aos-duration="600" data-aos-offset="1"  data-aos-delay="350" class="btn btn-ch-primary ml-auto mt-3" type="button" [routerLink]="['/product']" >
+          <div class="position-relative overflow-hidden btn-cont">
+            <div class="btn-ch-primary-dummy">Products</div>
+            <div class="btn-ch-primary-content">Products</div>
+            <div class="btn-ch-primary-trans">Products<img src="assets/icons/arrow-right-white.svg"></div>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div class="herobanner-overlay1" data-aos-duration="600" data-aos-delay="50" data-aos="fade-right" ></div>
+    <div class="herobanner-overlay2" data-aos-duration="600" data-aos="fade-right" ></div>
+  </div>
+  <div class="hero-banner">
+    <carousel [isAnimated]="true" [showIndicators]="false" [interval]="5000">
+      <slide>
+        <img src="./../../../assets/images/homebg-1.jpg" alt="first slide" style="display: block;min-width:100%; ">
+      </slide>
+      <slide>
+        <img src="./../../../assets/images/homebg-2.jpg" alt="second slide" style="display: block;min-width:100%; ">
+      </slide>
+
+    </carousel>
+    <!-- <img src="./../../../assets/images/homebg-1.jpg" min-width="100%" alt=""> -->
+  </div>
+  <div class="row">
+    <div class="col-9 green-cont"></div>
+  </div>
+</div>
+<div id="aboutus" class="px-g pb-3">
+  <div class="ch-container px-0">
+  <div class="row">
+    <div class="col-lg-6 aboutus-l-cont d-flex flex-column">
+      <div class="overflow-hidden" >
+        <div class="section-heading" data-aos-duration="600" data-aos="fade-up">About Us</div>
+      </div>
+      <div class="overflow-hidden">
+        <hr data-aos="fade-right" data-aos-duration="600" class="ch-hr">
+      </div>
+
+      <div class="overflow-hidden">
+        <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="50" class="about-content mt-3">Our love towards coir commenced on 1974 as <b>Kali coir industries</b> which is one of the oldest and promising manufacturing unit started by Late Thiru K.Kuppusamy gounder in agri land pollachi .
+          <br><br>
+          And with relentless efforts on quality based production our 2nd manufacturing unit <b>Jai Sri coir products</b> was commenced on 2010 by P.K.N Kalanidhi Babu. And passing through <b>4 different generations</b>, with <b>47 years of experience</b> in coir industry makes <b>COIR HUB</b> prominent and successful.
+        </div>
+        </div>
+      <div>
+        <div class="row mt-5 aboutus-r-cont ">
+          <div class="col-xl-6  col-md-6 mb-3"  data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+            <div class="aboutus-card h-100">
+              <img src="./../../../assets/icons/vision.png" alt="">
+              <div class="card-title heading-font">Vision</div>
+              <div class="card-content">
+                Intend to bring reforms in the farming practices and in the environment through our quality coco products to lead a quality life.
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-6 mb-3"  data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+            <div class="aboutus-card h-100">
+              <img src="./../../../assets/icons/mission.png" alt="">
+              <div class="card-title heading-font">Mission</div>
+              <div class="card-content">
+                To manufacture a range of biodegradable coco products and to expand the business beyond boundaries with the main concern on environment and customer satisfaction.</div>
+            </div>
+          </div>
+        </div>
+<!--  <button class="btn bth-ch-primary mt-5">LEARN MORE</button> -->
+      </div>
+    </div>
+    <div class="col-lg-6 d-flex flex-column justify-content-center about-img-col">
+      <div class="row"  >
+        <div class="col-sm-6 about-left-cont">
+          <div data-aos-duration="600"  data-aos="fade-left" data-aos-delay="50">
+
+            <div class="small-green-cont"></div>
+          </div>
+          <div class="large-image-comp" data-aos-duration="600"  data-aos="fade-left" data-aos-delay="100">
+            <div class="large-image-cont overflow-hidden">
+              <img src="./../../../assets/images/a1.jpg" alt="">
+            </div>
+            <div class="image-bg-cont"></div>
+          </div>
+        </div>
+        <div class="col-sm-6 show-lg flex-column about-right-cont">
+          <div class="small-image-cont overflow-hidden" data-aos-duration="600" data-aos="fade-left" data-aos-delay="500">
+            <img src="./../../../assets/images/a2.jpg" alt="">
+          </div>
+          <div data-aos-duration="600"  data-aos="fade-left" data-aos-delay="250">
+
+            <div class="large-green-cont" ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<app-whyus></app-whyus>
+<app-workwithus></app-workwithus>
+<app-contact id="contact"></app-contact>
+<app-footer></app-footer>

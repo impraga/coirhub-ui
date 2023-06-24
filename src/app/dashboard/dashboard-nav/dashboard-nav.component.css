@@ -1,0 +1,26 @@
+
+.nav-link{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  padding: 0 20px !important;
+  transition: ease-in color .3s;
+}
+.nav-link:hover{
+  color: var(--var-ch-green);
+}
+.nav-link.active{
+  color: var(--var-ch-green);
+  font-weight: 600;
+}
+.navbar{
+  background-color: var(--var-ch-grey);
+  color: white;
+  height: 56px;
+}
+.nav-logo img{
+  height: 26px;
+}
+.divider{
+  opacity: .2;
+}

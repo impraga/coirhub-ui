@@ -1,0 +1,33 @@
+<nav class="navbar px-g">
+  <div class="container-fluid px-0">
+    <a class="navbar-brand"  [routerLink]="['']" fragment="home"><img src="./../../../assets/icons/logo-color-white.svg" alt=""></a>
+
+      <div class="hamBurger"  (click)="onMenu()" [class.active]="menuState">
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
+    </div>
+  </div>
+</nav>
+<div class="menubar d-flex align-items-center px-g" [class.active]="menuState">
+  <div class="item" [class.itemactive]="menuItemState">
+    <div class="menu-watermark" >MENU</div>
+  <div class="menu-items heading-font" >
+    <div class="menu-ele overflow-hidden">
+      <div class="menu-text" (click)="onMenu()" [routerLink]="['']" fragment="home">HOME</div>
+    </div>
+    <div class="menu-ele overflow-hidden">
+      <div class="menu-text" (click)="onMenu()" [routerLink]="['']" fragment="aboutus">ABOUT US</div>
+    </div>
+    <div class="menu-ele overflow-hidden">
+      <div class="menu-text" (click)="onMenu()" [routerLink]="['/product']">PRODUCTS</div>
+    </div>
+    <div class="menu-ele overflow-hidden">
+      <div class="menu-text" (click)="onMenu()" [routerLink]="['/gallery']">GALLERY</div>
+    </div>
+    <div class="menu-ele overflow-hidden">
+      <div class="menu-text" (click)="onMenu()" [routerLink]="['']" fragment="contact">CONTACT US</div>
+    </div>
+  </div></div>
+</div>
+<div class="menubar-overlay" [class.active]="menuStateOverlay"></div>

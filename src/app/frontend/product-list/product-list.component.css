@@ -1,0 +1,221 @@
+#product{
+  min-height: 80vh;
+  padding-top: 56px;
+  background-image: url(/assets/icons/bg-pattern1.svg);
+  background-position: left top;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+}
+.product-title{
+  min-height: 250px;
+  margin-top: 80px;
+}
+.products-list{
+  background-color: #F2F2F2;
+}
+.product-card{
+  padding: 20px 20px;
+  background-color: white;
+  border-radius: 0 90px 0 10px;
+  color: #4E4E4E;
+  width: 100%;
+  max-width: 390px;
+  margin: auto;
+  height:100%;
+  /* margin-bottom: 60px; */
+  box-shadow:  5px 5px 15px #00000005;
+  transition: ease-in-out .3s;
+}
+.product-card:hover{
+  box-shadow:  5px 5px 15px #0000001a;
+
+}
+.product-img-cont{
+  margin: auto;
+  width: 100%;
+  max-width: 350px;
+  padding-top:calc(100% - 4px);
+  border-radius: 0 75px 0 75px;
+  position: relative;
+  /* min-height: 350px;
+  max-height: 350px; */
+  border: 2px solid var(--var-ch-green);
+  overflow: hidden;
+}
+.product-img-cont img{
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.product-list-row{
+  transform: translateY(-100px);
+}
+.product-heading{
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.product-price{
+  opacity: .5;
+}
+.product-price-value{
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+/* Product-details */
+#product-details{
+  position: fixed;
+  width: 100vw;
+  z-index: 5;
+  height: 100vh;
+  top: 0;
+  right: -101vw;
+  transition: ease-in-out .3s;
+  overflow-y: hidden;
+  /* display: none; */
+}
+.product-details-active{
+  right: 0 !important;
+  /* display: block !important; */
+}
+.product-details-overlay{
+  background-color: rgba(0, 0, 0, 0.39);
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  transition: ease-in-out .3s;
+  right: -101vw;
+}
+.product-details-overlay.active{
+  right: 0;
+}
+.product-details-cont{
+  width: 100vw;
+  max-width: 600px;
+  z-index: 2;
+  background-color: white;
+  position: absolute;
+  right: -1000px;
+  top: 56px;
+  margin-top: 25px;
+  border-radius: 30px 0 0 30px;
+  height: calc(100vh - 106px);
+  transition: ease-in-out .7s;
+}
+.product-details-cont.active{
+  right: 0;
+}
+.product-details-close{
+  position: relative;
+  margin-left: auto;
+  width: 50px;
+  height: 50px;
+  background-color: var(--var-ch-green);
+  border-radius: 0 0 0 20px;
+  cursor: pointer;
+  transition: ease-in-out .3s;
+  border-bottom: 4px solid white;
+}
+.product-details-close:hover{
+  background-color: #1aa351;
+
+}
+.product-details-close img{
+  width: 20px;
+  margin: 12px 15px 15px 15px;
+}
+.product-details-info{
+  color: #4E4E4E;
+  padding: 0 30px;
+  overflow-y: scroll;
+  height: calc(100vh - 180px);
+  margin-right: 10px;
+}
+.product-details-img-cont{
+  width: 100%;
+  max-width: 350px;
+
+  overflow: hidden;
+  margin: auto;
+  border: 2px solid var(--var-ch-green);
+  border-radius: 30px;
+
+}
+.product-desc{
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+.product-details-img-cont img{
+  max-width: 350px;
+
+  width: 100%;
+}
+.btn-online{
+  padding: 12px 35px;
+  border-radius: 0px 0px;
+  border: 1.5px solid var(--var-ch-green);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.btn.amazon, .btn.flipkart{
+  background-color:#edfff1 ;
+  color: white;
+}
+.btn.amazon:hover, .btn.flipkart:hover{
+  background-color:#e9f8e4 ;
+  color: white;
+}
+.buy-heading{
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Comfortaa';
+}
+
+@media only screen and (max-width: 991px){
+  .product-card{
+    border-radius: 0 80px 0 10px;
+
+  }
+  .product-img-cont{
+    border-radius: 0 65px 0 65px;
+  }
+
+}
+@media only screen and (max-width: 600px){
+  #product{
+    background-size:150%;
+  }
+  .product-details-cont{
+    margin-top: 0px;
+    height: calc(100vh - 56px);
+    border-radius: 0;
+  }
+  .product-details-info{
+    height: calc(100vh - 120px);
+  }
+
+}
+
+/* width */
+.product-details-info::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+.product-details-info::-webkit-scrollbar-track {
+  /* background: #f1f1f1; */
+background: transparent;
+}
+
+/* Handle */
+.product-details-info::-webkit-scrollbar-thumb {
+  /* background: #888; */
+  background: rgb(195, 195, 195);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+.product-details-info::-webkit-scrollbar-thumb:hover {
+  background: rgb(118, 119, 118);
+}

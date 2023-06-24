@@ -1,0 +1,27 @@
+<div class="container-fluid h-100">
+  <div class="row h-100">
+    <div class="flex-fill image-container"></div>
+    <div class="form-container col-auto px-5 d-flex align-items-center justify-content-center">
+
+      <div class="">
+        <div class="mb-3">Log in</div>
+        <div class="alert alert-danger mb-3" role="alert" *ngIf="errorMessagePass">Please enter the valid password</div>
+        <div class="alert alert-danger mb-3" role="alert" *ngIf="errorMessage">Please enter the valid Username and Password</div>
+        <div class="alert alert-danger mb-3" role="alert" *ngIf="errorMessageUser">Please enter the valid Username</div>
+        <form class="login-form" (submit)="onLogin(loginForm)" #loginForm="ngForm">
+          <mat-form-field class="add-product-full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input name="email" ngModel matInput type="email" required #emailInput="ngModel"/>
+            <mat-error *ngIf="emailInput.invalid">Please enter the Valid Email</mat-error>
+          </mat-form-field>
+          <mat-form-field class="add-product-full-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input name="password" ngModel  matInput type="password" required #passwordInput="ngModel"/>
+            <mat-error *ngIf="passwordInput.invalid">Please enter the Valid password</mat-error>
+          </mat-form-field>
+          <button class="btn btn-success mt-3" type="submit">Log in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

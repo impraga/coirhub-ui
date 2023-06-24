@@ -1,0 +1,54 @@
+.footer-link{
+  background-color: #091722;
+}
+.footer-badge{
+  background-color: #06111a;
+}
+.footer-logo img{
+  height: 40px;
+}
+.footer-heading{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.footer-address{
+  margin-top: 10px;
+  font-size: 1rem;
+  opacity: .9;
+  line-height: 1.4;
+}
+.footer-social-icon img{
+  width: 30px;
+}
+.footer-dev , .footer-cr{
+  opacity: .8;
+}
+.footer-dev{
+  text-align: right;
+}
+.footer-dev a:hover{
+  opacity: .8;
+}
+.footer-dev a{
+  color: white;
+  opacity: 1;
+  text-decoration: none;
+}
+@media screen and (max-width: 767px) {
+  .footer-link{
+    text-align: center;
+  }
+  .footer-link .ch-hr{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-icon{
+    justify-content: center;
+  }
+  .footer-dev , .footer-cr{
+    text-align: center;
+  }
+}
+.love{
+  color: red;
+}

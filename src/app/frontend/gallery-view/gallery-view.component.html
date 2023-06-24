@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+<div class="gallert-cont">
+  <div class="main">
+
+    <div class="main_content">
+      <ng-container *ngFor="let gallery of galleryList">
+        <div class="picture_wrapper">
+          <img [src]="gallery.imagePath" alt="">
+        </div>
+      </ng-container>
+
+    </div>
+
+  </div>
+</div>
+
+<app-footer></app-footer>

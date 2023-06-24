@@ -1,0 +1,25 @@
+<div class="container-fluid h-100">
+  <div class="row h-100">
+    <div class="flex-fill image-container"></div>
+    <div class="form-container col-auto px-5 d-flex align-items-center justify-content-center">
+
+      <div class="">
+        <div class="mb-3">Sign up</div>
+        <form class="login-form" (submit)="onSignup(loginForm)" #loginForm="ngForm">
+          <div class="alert alert-danger mb-3" role="alert" *ngIf="emailalreadytaken">Account already available</div>
+          <mat-form-field class="add-product-full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input name="email" ngModel matInput type="email" required #emailInput="ngModel"/>
+            <mat-error *ngIf="emailInput.invalid">Please enter the Valid Email</mat-error>
+          </mat-form-field>
+          <mat-form-field class="add-product-full-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input name="password" ngModel  matInput type="password" required #passwordInput="ngModel"/>
+            <mat-error *ngIf="passwordInput.invalid">Please enter the Valid password</mat-error>
+          </mat-form-field>
+          <button class="btn btn-success mt-3" type="submit">Sign up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
