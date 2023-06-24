@@ -17,7 +17,7 @@
   margin-bottom: 20px;
 }
 .main .main_content .picture_wrapper img {
-  height: 100%;
+  height: auto;
   width: 100%;
   object-fit: cover;
   border-radius: 2px;

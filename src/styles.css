@@ -1,7 +1,9 @@
-@font-face {
-  font-family: Comfortaa;
-  src: url(/assets/fonts/Comfortaa-VariableFont_wght.ttf);
-}
+/* @font-face {
+  font-family: Comfortaa;*/
+  /* src: url(/assets/fonts/Comfortaa-VariableFont_wght.ttf); */
+  /* src: url(/assets/fonts/Comfortaa-VariableFont_wght.woff); */
+/*} */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
 
 .mat-form-field-appearance-outline .mat-form-field-infix {
